@@ -1,0 +1,21 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="spacesDc"
+            class="de.helpernet.pokopr.web.model.files.Space">
+        </collection>
+    </data>
+    <layout>
+        <table id="spacesTable"
+            dataContainer="spacesDc"
+            width="100%"
+            contextMenuEnabled="false"
+            columnControlVisible="false"
+            reorderingAllowed="false">
+            <columns>
+                <column id="name"/>
+                <column id="isArchived"/>
+            </columns>
+            <rowsCount/>
+        </table>
+    </layout>
+</window>

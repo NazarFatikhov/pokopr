@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+    messagesPack="com.haulmont.sample.petclinic.web.screens.main"
+    caption="mainMsg://loginWindow.caption">
+    <actions>
+        <action id="submit"
+            caption="msg://loginWindow.okButton"
+            shortcut="ENTER"/>
+    </actions>
+    <layout>
+        <vbox id="loginWrapper">
+            <vbox id="loginPanel">
+                <vbox id="loginMainBox">
+                    <image id="logoImage"
+                        align="MIDDLE_CENTER"
+                        height="AUTO"
+                        scaleMode="SCALE_DOWN"
+                        width="AUTO"/>
+                    <vbox id="loginForm">
+                        <textField id="loginField"
+                            icon="USER"
+                            inputPrompt="mainMsg://loginWindow.loginPlaceholder"/>
+                        <passwordField id="passwordField"
+                            autocomplete="true"
+                            icon="LOCK"
+                            inputPrompt="mainMsg://loginWindow.passwordPlaceholder"/>
+                        <checkBox id="rememberMeCheckBox"
+                            caption="mainMsg://loginWindow.rememberMe"/>
+                        <button id="loginButton"
+                            action="submit"/>
+                    </vbox>
+                </vbox>
+            </vbox>
+        </vbox>
+    </layout>
+</window>
