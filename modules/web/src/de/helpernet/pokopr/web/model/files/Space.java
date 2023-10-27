@@ -4,6 +4,9 @@ import com.haulmont.chile.core.annotations.MetaClass;
 import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
+import de.helpernet.pokopr.integration.teamdrive.client.dto.SpaceDto;
+import de.helpernet.pokopr.integration.teamdrive.client.dto.SpaceStatus;
+
 @MetaClass(name = "pokopr_Space")
 public class Space extends StandardEntity {
 
@@ -15,6 +18,10 @@ public class Space extends StandardEntity {
 
         this.name = name;
         this.isArchived = isArchived;
+    }
+
+    public static Space from(SpaceDto spaceDto) {
+        return new Space(spaceDto.getName(), spaceDto.getStatus().equals(SpaceStatus.ACTIVE));
     }
 
     @MetaProperty

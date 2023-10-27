@@ -9,7 +9,7 @@ import de.helpernet.pokopr.integration.teamdrive.client.TeamDriveClient;
 import de.helpernet.pokopr.integration.teamdrive.client.TeamDriveClientProperties;
 
 @Configuration
-public class TestConfig {
+public class GlobalConfig {
 
     @Bean
     public ObjectMapper objectMapper() {
