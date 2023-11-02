@@ -11,6 +11,12 @@
             contextMenuEnabled="false"
             columnControlVisible="false"
             reorderingAllowed="false">
+            <actions>
+                <action id="openSpace"
+                    trackSelection="true"
+                    caption="msg://openSpace"
+                />
+            </actions>
             <columns>
                 <column id="name"/>
                 <column id="isArchived"/>

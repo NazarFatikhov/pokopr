@@ -76,7 +76,7 @@ public class TeamDriveClient {
         Request request = new Request.Builder()
                 .url(properties.getUrl() + "/api/joinSpace")
                 .post(body)
-                .addHeader("Cookie", "Cookie_1=value; SessionID=MRal2eTG7yI")
+                .addHeader("Cookie", "Cookie_1=value; SessionID=Rs1bf0J4nqQ")
                 .build();
 
         try (Response r = httpClient.newCall(request).execute()) {
@@ -93,7 +93,7 @@ public class TeamDriveClient {
 
         Request request = new Request.Builder()
                 .url(properties.getUrl() + "/api/getSpaces")
-                .addHeader("Cookie", "Cookie_1=value; SessionID=MRal2eTG7yI")
+                .addHeader("Cookie", "Cookie_1=value; SessionID=Rs1bf0J4nqQ")
                 .build();
 
         try (Response response = httpClient.newCall(request).execute()) {
@@ -105,7 +105,7 @@ public class TeamDriveClient {
             return spaceModel.stream()
                     .map(SpaceDto::from)
                     .collect(Collectors.toList());
-        } catch (IOException | NullPointerException e) {
+        } catch (Exception e) {
             throw new TeamDriveClientException(e);
         }
     }
